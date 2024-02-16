@@ -87,6 +87,16 @@
 
             // Display hometown and full name using alert
             alert("Hometown: " + hometown + "\nFull Name: " + firstName + " " + lastName);
+
+            // Prompt for age
+            var age = prompt("Enter your age:");
+
+            // Check age and display appropriate alert
+            if (age < 18) {
+                alert("You cannot apply. Minimum age requirement is 18.");
+            } else {
+                alert("You can apply to SheCodes!");
+            }
         }
     </script>
 </body>
