@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,7 +27,7 @@
             line-height: 1.2;
             text-align: center;
             margin-bottom: 10px;
-        }
+        } 
 
         h1 span {
             display: block;
@@ -107,30 +108,64 @@
 </head>
 
 <body>
-    <h1>
+    <h1 id="weatherInfo">
         🌤
-        <span>Currently 21° in Kaduna, Nigeria</span>
+        <br />
+        Currently 21° in Tokyo
     </h1>
     <h2>13° / <strong>23°</strong></h2>
     <ul>
         <li>
-            <h3>🌧 Tomorrow</h3>
+            <h3>
+                🌧Tomorrow
+            </h3>
             <p>10° / <strong>22°</strong></p>
         </li>
         <li>
-            <h3>🌥 Saturday</h3>
+            <h3>
+                🌥 Saturday
+            </h3>
             <p>15° / <strong>17°</strong></p>
         </li>
         <li>
-            <h3>☀️ Sunday</h3>
+            <h3>
+                ☀️ Sunday
+            </h3>
             <p>25° / <strong>28°</strong></p>
         </li>
     </ul>
-    <button>
+
+    <button onclick="changeCity()">
         Change city
     </button>
     <p>
         Coded by Nafisa Lawal Idris
     </p>
+
+    <script>
+        function changeCity() {
+            // Prompt for city input
+            var newCity = prompt("Enter the city:");
+
+            if (newCity) { // Check if the user provided a city
+                // Prompt for weather input
+                var newWeather = prompt("Enter the current weather conditions (e.g., Sunny, Rainy, Cloudy):");
+
+                // Update weather information
+                var weatherInfo = document.getElementById("weatherInfo");
+                weatherInfo.innerHTML = `🌤<br />Currently ${Math.floor(Math.random() * 10) + 15}° in ${newCity}`;
+
+                // Update other weather details (you can customize this based on your requirements)
+                document.querySelector("h2").innerHTML = `${Math.floor(Math.random() * 10) + 10}° / <strong>${Math.floor(Math.random() * 10) + 20}°</strong>`;
+                document.querySelectorAll("li h3")[0].innerHTML = `🌧 ${newWeather} Tomorrow`;
+                document.querySelectorAll("li p")[0].innerHTML = `${Math.floor(Math.random() * 10) + 10}° / <strong>${Math.floor(Math.random() * 10) + 20}°</strong>`;
+                document.querySelectorAll("li h3")[1].innerHTML = `🌥 ${newWeather} Saturday`;
+                document.querySelectorAll("li p")[1].innerHTML = `${Math.floor(Math.random() * 10) + 15}° / <strong>${Math.floor(Math.random() * 10) + 17}°</strong>`;
+                document.querySelectorAll("li h3")[2].innerHTML = `☀️ ${newWeather} Sunday`;
+                document.querySelectorAll("li p")[2].innerHTML = `${Math.floor(Math.random() * 10) + 25}° / <strong>${Math.floor(Math.random() * 10) + 28}°</strong>`;
+            }
+        }
+    </script>
 </body>
+
 </html>
