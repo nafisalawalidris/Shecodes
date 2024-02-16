@@ -97,7 +97,12 @@
             } else {
                 alert("You can apply to SheCodes!");
             }
+            
+            // Call the askForCountry function
+            askForCountry();
+        }
 
+        function askForCountry() {
             // Prompt for country
             var country = prompt("What country are you from?").toLowerCase();
 
@@ -105,7 +110,7 @@
             if (country === "brazil" || country === "portugal") {
                 alert("You speak Portuguese");
             } else {
-                alert("You don't speak Portuguese");
+                alert("Go learn Portuguese!");
             }
         }
     </script>
