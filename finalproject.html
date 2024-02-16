@@ -1,124 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greek Yogurt 🥛</title>
     <style>
         body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://images.unsplash.com/photo-1530259152377-3a014e1092e0?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover;
+            color: #fff;
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f3f3;
-            color: #333;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             text-align: center;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-blend-mode: overlay;
         }
 
         h1 {
-            color: #e44d26;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffcccb;
         }
 
         h2 {
-            color: #4d4d4d;
-            margin-top: 5px;
+            font-size: 24px;
+            font-weight: normal;
+            margin-bottom: 20px;
+            color: #ffeeee;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            color: #ffeeee;
         }
 
         img {
             width: 100%;
-            max-height: 300px;
+            max-width: 400px;
             border-radius: 10px;
-            margin: 20px 0;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        p {
-            font-size: 16px;
-            line-height: 1.5;
-            color: #666;
-        }
-
-        a.learn-more {
-            display: inline-block;
-            color: #3498db;
+        a {
             text-decoration: none;
-            margin: 20px 0;
+            color: #ffffff;
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
 
-        a.learn-more:hover {
-            text-decoration: underline;
+        a:hover {
+            color: #ffcccb;
         }
 
-        button.buy-button {
-            display: block;
-            margin: 20px auto;
-            border: none;
-            background-color: #e44d26;
+        button {
+            background-color: #4CAF50;
             color: #fff;
+            padding: 15px 30px;
             font-size: 18px;
-            line-height: 1.5;
-            padding: 10px 20px;
+            border: none;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
 
-        button.buy-button:hover {
-            background-color: #d1411d;
-        }
-
-        p.footer {
-            font-size: 14px;
-            color: #888;
-            margin-top: 20px;
-        }
-
-        a.footer-link {
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        a.footer-link:hover {
-            text-decoration: underline;
+        button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <h1>
-            I love Yogurt
-        </h1>
-        <h2>
-            Especially Greek Yogurt
-        </h2>
-        <img src="https://images.unsplash.com/photo-1530259152377-3a014e1092e0?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Greek Yogurt" />
-        <p>
-            Strained yogurt, Greek yogurt, yogurt cheese, or sack yoghurt is yogurt
-            that has been strained to remove most of its whey, resulting in a
-            thicker consistency than unstrained yogurt, while preserving yogurt's
-            distinctive sour taste.
-        </p>
-        <a href="https://en.wikipedia.org/wiki/Strained_yogurt" target="_blank" class="learn-more">
-            Learn more on Wikipedia
-        </a>
-        <button class="buy-button">
-            👉 Buy Greek Yogurt
-        </button>
-        <p class="footer">
-            This page was built by
-            <a href="https://nafisalawalidris.github.io/13/" target="_blank" class="footer-link">
-                Nafisa Lawal Idris
-            </a>
-        </p>
-    </div>
-</body>
 
+    <h1>I Love Greek Yogurt</h1>
+    <h2>Strained to Perfection</h2>
+    <img src="https://images.unsplash.com/photo-1530259152377-3a014e1092e0?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Greek Yogurt" />
+    <p>Strained yogurt, Greek yogurt, yogurt cheese, or sack yoghurt is yogurt that has been strained to remove most of its whey, resulting in a thicker consistency than unstrained yogurt, while preserving yogurt's distinctive sour taste.</p>
+    <a href="https://en.wikipedia.org/wiki/Greek_yogurt" target="_blank">Learn more about Greek Yogurt</a>
+    <br>
+    <button onclick="showMessage()">Buy Greek Yogurt</button>
+
+    <script>
+        function showMessage() {
+            let wantToBuy = confirm("Would you like to buy some delicious Greek Yogurt?");
+            if (wantToBuy) {
+                let quantity = prompt("How many packs would you like?");
+                if (quantity) {
+                    alert(`Great choice! You've added ${quantity} packs to your cart. Enjoy your Greek Yogurt!`);
+                } else {
+                    alert("No problem! Feel free to explore more about Greek Yogurt.");
+                }
+            } else {
+                alert("That's okay! Greek Yogurt will be here whenever you're ready.");
+            }
+        }
+    </script>
+
+</body>
 </html>
