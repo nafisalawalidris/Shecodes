@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather App</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f3f3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('https://source.unsplash.com/a-grassy-field-with-power-lines-in-the-distance-VZNMdtbkQ3o');
+            background-size: cover;
+            background-position: center;
+            color: #000000;
+        }
+
+        h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h1 span {
+            display: block;
+            font-size: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        h2 strong {
+            font-weight: bold;
+            font-size: 2rem;
+            margin-left: 5px;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        li {
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+            margin: 0 10px;
+            background: rgba(255, 254, 254, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        li:hover {
+            background: rgba(5, 0, 0, 0.4);
+        }
+
+        p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        button {
+            margin: 20px auto;
+            border: 1px solid #fefdf8;
+            background: none;
+            color: #080808;
+            font-size: 1rem;
+            line-height: 1.5;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: all 200ms ease;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #e7e3e3;
+            color: #90a9ce;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        p {
+            animation: fadeIn 2s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        🌤
+        <span>Currently 21° in Kaduna, Nigeria</span>
+    </h1>
+    <h2>13° / <strong>23°</strong></h2>
+    <ul>
+        <li>
+            <h3>🌧 Tomorrow</h3>
+            <p>10° / <strong>22°</strong></p>
+        </li>
+        <li>
+            <h3>🌥 Saturday</h3>
+            <p>15° / <strong>17°</strong></p>
+        </li>
+        <li>
+            <h3>☀️ Sunday</h3>
+            <p>25° / <strong>28°</strong></p>
+        </li>
+    </ul>
+    <button>
+        Change city
+    </button>
+    <p>
+        Coded by Nafisa Lawal Idris
+    </p>
+</body>
+</html>
