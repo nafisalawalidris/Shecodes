@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,30 +10,37 @@
         body {
             font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
         }
+
         section {
             margin: 120px 0;
         }
-        h1, h2 {
+
+        h1,
+        h2 {
             font-weight: 900;
             font-size: 34px;
             line-height: 48px;
             margin: 0;
         }
+
         h1 {
             color: #272044;
             text-align: center;
         }
+
         h2 {
             text-align: center;
             color: #885df1;
             padding: 0 0 24px;
         }
+
         p {
             font-size: 18px;
             line-height: 28px;
             font-family: PT Mono, monospace;
             text-align: center;
         }
+
         button {
             border-radius: 25px;
             margin: 0 auto;
@@ -46,6 +54,7 @@
             text-decoration: none;
             transition: all 200ms ease;
         }
+
         button:hover {
             color: #fff;
             background: #885df1;
@@ -76,41 +85,20 @@
 
     <script>
         function applyNow() {
-            // Prompt for hometown
-            var hometown = prompt("Enter your hometown:");
-
             // Prompt for first name
             var firstName = prompt("Enter your first name:");
-
-            // Prompt for last name
-            var lastName = prompt("Enter your last name:");
-
-            // Display hometown and full name using alert
-            alert("Hometown: " + hometown + "\nFull Name: " + firstName + " " + lastName);
 
             // Prompt for age
             var age = prompt("Enter your age:");
 
-            // Check age and display appropriate alert
-            if (age < 18) {
-                alert("You cannot apply. Minimum age requirement is 18.");
-            } else {
-                alert("You can apply to SheCodes!");
-            }
-            
-            // Call the askForCountry function
-            askForCountry();
-        }
+            // Select the h1 element
+            var h1Element = document.querySelector("h1");
 
-        function askForCountry() {
-            // Prompt for country
-            var country = prompt("What country are you from?").toLowerCase();
-
-            // Check country and display appropriate alert
-            if (country === "brazil" || country === "portugal") {
-                alert("You speak Portuguese");
+            // Check age and update h1 text
+            if (age >= 18) {
+                h1Element.textContent = "Hi, " + firstName + "! Welcome to SheCodes!";
             } else {
-                alert("Go learn Portuguese!");
+                h1Element.textContent = "Sorry, " + firstName + "! You cannot join SheCodes";
             }
         }
     </script>
